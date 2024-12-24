@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaune & Blue, architecture d'intérieur, cuisiniste, spécialiste en salle de bain et en rénovation d'intérieur.</title>
+    <link rel="stylesheet" type='text/css' href="dist/styles.css">
+    <meta name="description"
+        content="Jaune & Blue, architecture d'intérieur, cuisiniste, spécialiste en salle de bain et en rénovation d'intérieur. J’interviens sur Brest, Quimper et Morlaix. Contactez-nous pour un devis personnalisé.">
+    <style>
+        /* Custom CSS for removing number input arrows */
+        .input-no-arrows::-webkit-inner-spin-button,
+        .input-no-arrows::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .input-no-arrows {
+            appearance: textfield;
+            /* For Firefox */
+        }
+    </style>
+</head>
+
+<body
+    class="h-screen flex flex-col max-md:gap-4 md:justify-between bg-cover md:bg-top max-md:bg-center bg-no-repeat backdrop-blur-sm"
+    style="background-image: url('image/image_site.webp');">
+    <header class="flex justify-center ">
+        <img src="image/logo.webp" alt="Logo du site Jaune & Blue" class="max-md:h-28 h-40 mt-4 ">
+    </header>
+
+    <main class="flex flex-col items-center justify-center flex-grow ">
+        <div
+            class="w-1/2 max-md:w-5/6 flex flex-col gap-3 md:gap-4 bg-gradient-to-r from-zinc-100 via-zinc-50 to-zinc-100 p-2 md:p-4 rounded-lg shadow-lg border-2 border-zinc-300">
+
+            <h1 class="text-xl md:text-4xl italic">Parlez nous de votre projet</h1>
+            <p class="max-md:text-sm text-justify px-4 text-zinc-600">Pour une réponse adaptée, merci de préciser tous
+                les détails qui
+                nous permettront de
+                mieux appréhender vos besoins (suface totale du bien, surface à étudier, description du projet, budget,
+                etc...).
+            </p>
+            <form action="https://formspree.io/f/mkgnpley" method="POST" class=" flex flex-col gap-2 md:gap-3 py-3 px-4"
+                id="contactForm">
+                <div class="grid grid-cols-2 gap-5 max-lg:gap-2">
+                    <div>
+                        <label for="nom" class="sr-only">Nom*</label>
+                        <input
+                            class="w-full bg-gray-200 text-gray-900 md:mt-2 p-2 md:p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 max-md:text-sm"
+                            type="text" name="nom" id="nom" placeholder="Nom*" aria-label="Entrez votre nom de famille"
+                            required>
+                    </div>
+                    <div>
+                        <label for="prenom" class="sr-only">Prénom*</label>
+                        <input
+                            class="w-full bg-gray-200 text-gray-900 md:mt-2  p-2 md:p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 max-md:text-sm"
+                            type="text" name="prenom" id="prenom" placeholder="Prénom*" aria-label="Entrez votre prénom"
+                            required>
+                    </div>
+
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-lg:gap-2">
+                    <div>
+                        <label for="email" class="sr-only">Email*</label>
+                        <input
+                            class="w-full bg-gray-200 text-gray-900 md:mt-2  p-2 md:p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 max-md:text-sm"
+                            type="email" name="email" id="email" placeholder="Email*" aria-label="Entrez votre email"
+                            required>
+                    </div>
+                    <div>
+                        <label for="telephone" class="sr-only">Téléphone*</label>
+                        <input
+                            class="w-full bg-gray-200 text-gray-900 input-no-arrows md:mt-2 p-2 md:p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 max-md:text-sm"
+                            type="text" name="telephone" id="telephone" placeholder="Téléphone*" maxlength="14"
+                            oninput="formatPhoneNumber(this)" aria-label="Entrez votre numéro de téléphone" required>
+                    </div>
+
+                </div>
+
+                <div>
+                    <label for="sujet" class="sr-only">Sujet*</label>
+                    <input
+                        class="w-full bg-gray-200 text-gray-900 md:mt-2  p-2 md:p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 max-md:text-sm"
+                        type="text" name="sujet" id="sujet" placeholder="Sujet*" aria-label="Entrez le sujet du mail"
+                        required>
+                </div>
+                <div>
+                    <label for="message" class="sr-only">Message*</label>
+                    <textarea name="message" id="message" placeholder="Message*"
+                        class="w-full max-md:h-32 h-44 bg-gray-200 text-gray-900 md:mt-2  p-2 md:p-3 rounded-lg border border-zinc-400 font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-700 max-md:text-sm"
+                        aria-label="Entrez votre message décrivant votre sujet de mail" required></textarea>
+                </div>
+                <div class="w-1/2 max-sm:w-3/4">
+                    <button type="submit" aria-label="Envoyer le message via le formulaire de contact"
+                        class="bg-blue-800 text-zinc-50 px-5 py-2 md:text-lg lg:text-xl font-semibold rounded-xl shadow-md transition-all duration-300 transform hover:translate-y-[-3px] hover:bg-slate-200 hover:text-slate-700 hover:shadow-lg focus:ring-2 hover:ring-blue-700  focus:ring-blue-700 hover:ring max-md:text-sm">
+                        Envoyer le message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer
+        class="bg-yellow-600 text-white font-semibold max-md:flex-col flex md:justify-center md:items-center px-3 md:px-5 py-3  gap-4 max-md:gap-1">
+        <p class="text-sm md:text-lg max-md:text-center ">Nous intervenons sur tout le Finistère • Brest 29200, Quimper 29000, Morlaix
+            29450</p>
+        <div class="h-0 md:h-10 w-[2px] bg-white/40"></div>
+        <div class="flex justify-around max-md:gap-2 gap-4 text-right">
+            <div class="flex items-center justify-end gap-2">
+                <svg viewBox="0 0 24 24" class="h-5 md:h-6 w-5 md:w-6" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    stroke="#ffffff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M14.3308 15.9402L15.6608 14.6101C15.8655 14.403 16.1092 14.2384 16.3778 14.1262C16.6465 14.014 16.9347 13.9563 17.2258 13.9563C17.517 13.9563 17.8052 14.014 18.0739 14.1262C18.3425 14.2384 18.5862 14.403 18.7908 14.6101L20.3508 16.1702C20.5579 16.3748 20.7224 16.6183 20.8346 16.887C20.9468 17.1556 21.0046 17.444 21.0046 17.7351C21.0046 18.0263 20.9468 18.3146 20.8346 18.5833C20.7224 18.8519 20.5579 19.0954 20.3508 19.3L19.6408 20.02C19.1516 20.514 18.5189 20.841 17.8329 20.9541C17.1469 21.0672 16.4427 20.9609 15.8208 20.6501C10.4691 17.8952 6.11008 13.5396 3.35083 8.19019C3.03976 7.56761 2.93414 6.86242 3.04914 6.17603C3.16414 5.48963 3.49384 4.85731 3.99085 4.37012L4.70081 3.65015C5.11674 3.23673 5.67937 3.00464 6.26581 3.00464C6.85225 3.00464 7.41488 3.23673 7.83081 3.65015L9.40082 5.22021C9.81424 5.63615 10.0463 6.19871 10.0463 6.78516C10.0463 7.3716 9.81424 7.93416 9.40082 8.3501L8.0708 9.68018C8.95021 10.8697 9.91617 11.9926 10.9608 13.04C11.9994 14.0804 13.116 15.04 14.3008 15.9102L14.3308 15.9402Z"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M20.9998 3L15.3398 8.66" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M19.5898 8.65991H15.3398V4.40991" stroke="#ffffff" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+                <a class="md:text-base text-sm hover:underline" href="#">06 06 46 39 38</a>
+            </div>
+            <div class="flex items-center justify-end gap-2">
+                <svg viewBox="0 0 24 24" width="24" height="24" class="h-5 md:h-6 w-5 md:w-6" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_iconCarrier2">
+                        <path
+                            d="M21 8L17.4392 9.97822C15.454 11.0811 14.4614 11.6326 13.4102 11.8488C12.4798 12.0401 11.5202 12.0401 10.5898 11.8488C9.53864 11.6326 8.54603 11.0811 6.5608 9.97822L3 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+                <a class="md:text-base text-sm hover:underline"
+                    href="mailto:contact@entreprise.com">contact@jaune-blue.com</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function formatPhoneNumber(input) {
+            // Supprimez tout ce qui n'est pas un chiffre
+            let phoneNumber = input.value.replace(/\D/g, '');
+
+            // Ajoutez un espace tous les 2 chiffres
+            phoneNumber = phoneNumber.replace(/(\d{2})(?=\d)/g, '$1 ');
+
+            // Mettez à jour la valeur de l'input avec le format
+            input.value = phoneNumber;
+        }
+    </script>
+    <script src="contact.js"></script>
+</body>
+
+</html>
